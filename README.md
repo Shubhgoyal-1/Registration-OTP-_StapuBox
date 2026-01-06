@@ -107,6 +107,23 @@ Make sure the Phone and laptop are on the same Wi-Fi network
 
    Open the downloaded APK file
 
+
+## Decisions
+1. Added Toasts for better User Experience 
+
+2. Added Loader and skeleton screen while verifying the otp 
+
+3. Changed the way of inputing the otp from an array of TextInput to a single TextInput
+
+4. Added a dropdown for country codes
+
+## Known Issues 
+1. SMS retrieving API is not working as EXPO is being used but auto read from keyboard can be used .
+
+2. Robust Error states cannot be maintained as i will have to remove the SSH security
+
+3. Offline Cache is not being used now but can easily be tracked using AsyncStorage.
+
 👨‍💻 Author
 
 Shubh Goyal
