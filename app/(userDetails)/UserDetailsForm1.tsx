@@ -1,12 +1,17 @@
 import { View, Text, Pressable } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import CustomInput from '@/components/CustomInput'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import CustomButton from '@/components/CustomButton'
 import { useRouter } from 'expo-router'
 import CustomHeader from '@/components/CustomHeader'
 import { useUserStore } from '@/store/User.store'
+import { useLocalSearchParams } from "expo-router";
+import FormSkeleton from '@/components/FormSkeleton'
 const UserDetails1 = () => {
+
+    const { loading } = useLocalSearchParams();
+    const [isLoading, setIsLoading] = useState(loading === "true");
 
     const setField = useUserStore((state) => state.setField);
     const name = useUserStore((state) => state.name);
@@ -16,16 +21,35 @@ const UserDetails1 = () => {
 
     const router = useRouter()
     const isFormValid = name && address1 && pinCode;
-    // const isFormValid = true;
-    return (
-        <SafeAreaView className="flex-1 bg-[rgb(45,46,47)]">
-            <View className="flex-1 px-6 pt-10">
 
+    // const isFormValid = true;
+
+    useEffect(() => {
+        if (loading === "true") {
+            const timer = setTimeout(() => {
+                setIsLoading(false);
+            }, 600);
+
+            return () => clearTimeout(timer);
+        }
+    }, []);
+
+    if (isLoading) {
+        return <FormSkeleton />;
+    }
+
+    return (
+
+
+
+        <SafeAreaView className="flex-1 bg-[rgb(45,46,47)]">
+            <View className="flex-1 px-6 pt-4">
                 <CustomHeader title='Enter Your Details' showBack={false} />
 
+
                 <View className="mb-12">
-                    <Text className="text-white mb-2 text-[20px]">
-                        Name<Text className="text-white text-[20px]">*</Text>
+                    <Text className="text-white mb-2 text-[16px]">
+                        Name<Text className="text-white text-[16px]">*</Text>
                     </Text>
                     <CustomInput
                         placeholder="antoine@soch.at"
@@ -35,8 +59,8 @@ const UserDetails1 = () => {
                 </View>
 
                 <View className="mb-12">
-                    <Text className="text-white mb-2 text-[20px]">
-                        Address<Text className="text-white text-[20px]">*</Text>
+                    <Text className="text-white mb-2 text-[16px]">
+                        Address<Text className="text-white text-[16px]">*</Text>
                     </Text>
 
                     <CustomInput
@@ -54,8 +78,8 @@ const UserDetails1 = () => {
                     </View>
                 </View>
                 <View className="mb-12">
-                    <Text className="text-white mb-2 text-[20px]">
-                        Pin Code<Text className="text-white text-[20px]">*</Text>
+                    <Text className="text-white mb-2 text-[16px]">
+                        Pin Code<Text className="text-white text-[16px]">*</Text>
                     </Text>
                     <CustomInput
                         placeholder="110224"
@@ -78,6 +102,7 @@ const UserDetails1 = () => {
                 />
             </View>
         </SafeAreaView>
+
     )
 }
 

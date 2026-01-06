@@ -15,7 +15,7 @@ const UserDetails3 = () => {
     const isFormValid = true;
     return (
         <SafeAreaView className="flex-1 bg-[rgb(45,46,47)]">
-            <View className="flex-1 px-6 pt-10">
+            <View className="flex-1 px-6 pt-4">
                 <CustomHeader title='Share Your Feedback' />
 
                 <CustomTextArea

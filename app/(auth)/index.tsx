@@ -6,6 +6,7 @@ import CustomInput from "@/components/CustomInput";
 import CustomButton from "@/components/CustomButton";
 import axios from 'axios';
 import { useUserStore } from "@/store/User.store";
+import Toast from "react-native-toast-message";
 
 const API_URL = "https://stapubox.com/trial/sendOtp";
 const API_TOKEN = process.env.EXPO_PUBLIC_API_TOKEN;
@@ -37,6 +38,10 @@ export default function Index() {
       return response.data;
     } catch (error: any) {
       console.error("OTP request failed:", error.response?.data || error.message);
+      Toast.show({
+        type: "error",
+        text1: "Otp Request Failed"
+      })
       throw error;
     }
   }
@@ -44,6 +49,10 @@ export default function Index() {
   const handleSendOTP = () => {
     sendOTP()
     console.log("OTP sent to:", mobile);
+    Toast.show({
+      type: "success",
+      text1: "Otp Sent Successfully"
+    })
     router.push("/OtpScreen")
   }
 
