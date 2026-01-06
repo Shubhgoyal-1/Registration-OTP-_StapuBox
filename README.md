@@ -1,50 +1,117 @@
 # Welcome to your Expo app 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is a Login With OTP App project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+A mobile application built with React Native and Expo to help login on a app using otp. The app focuses on ease of use, clean UI and a better user experience.
 
-1. Install dependencies
+## Features
 
+📊 Login Using OTP
+
+🕒 Detailed Toasts for better User Experience
+
+🩻 Skeleton Screens For better User Experience
+
+🎨 Clean and responsive UI using NativeWind (Tailwind CSS)
+
+📱 Smooth navigation using Expo Router
+
+## Tech Stack
+
+- Frontend: React Native
+
+- Framework: Expo
+
+- Navigation: Expo Router
+
+- State Management: Zustand
+
+- Styling: NativeWind (Tailwind CSS)
+
+- Language: TypeScript
+
+## Packages and Dependencies used (Main)
+
+- expo
+
+- react
+
+- react-native
+
+- expo-router
+
+- zustand
+
+- nativewind
+
+- tailwindcss
+
+- @expo/vector-icons
+
+- react-native-safe-area-context
+
+
+## How To Run The Project
+
+1. Install the Expo-Go app in your mobile device from the appstore or the playstore
+
+2. Clone the Project in your system
+
+   Open a terminal and run:
+   ```bash
+   git clone https://github.com/Shubhgoyal-1/Registration-OTP-_StapuBox.git
+   ```
+
+3. Move into the Project Directory  
+   ```bash
+   cd LoginWithOtp
+   ```
+4. Install the Packages
    ```bash
    npm install
    ```
-
-2. Start the app
-
+   This will install all libraries used in the project including Expo, React Native, navigation, styling, and state management tools.
+5. Run and start the Developement Server
    ```bash
    npx expo start
    ```
+   After running this command:
 
-In the output, you'll find options to open the app in a
+      -> A QR code will appear in the terminal
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+      -> Expo Dev Tools will open in the browser
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+6. Open the Expo Go app in your mobile device
 
-## Get a fresh project
+   Android: Open Expo Go and scan the QR code
 
-When you're ready, run:
+   iOS: Scan the QR code using the Camera app
 
-```bash
-npm run reset-project
-```
+📌Important Condition : 
+Make sure the Phone and laptop are on the same Wi-Fi network
+   
+## 2nd Approach
+1. Download the APK file
+   
+   [`Install`]("")
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Enable Unknown Sources (Android)
 
-## Learn more
+   ->Go to Settings → Security
 
-To learn more about developing your project with Expo, look at the following resources:
+   ->Enable Install unknown apps
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+   ->Allow your browser or file manager
+   
+3. Install the APK
 
-## Join the community
+   Open the downloaded APK file
 
-Join our community of developers creating universal apps.
+👨‍💻 Author
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Shubh Goyal
+
+B.Tech Student | React Native Developer
+
+
+   
