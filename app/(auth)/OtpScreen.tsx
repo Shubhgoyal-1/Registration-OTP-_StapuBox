@@ -64,9 +64,10 @@ export default function OtpScreen() {
                             type: "success",
                             text1: "Otp Verified Successfully"
                         })
-                        router.replace({ 
-                            pathname: "/(userDetails)/UserDetailsForm1", 
-                            params: { loading: "true" }, });
+                        router.replace({
+                            pathname: "/(userDetails)/UserDetailsForm1",
+                            params: { loading: "true" },
+                        });
                     } else {
                         Toast.show({
                             type: "error",
@@ -107,7 +108,9 @@ export default function OtpScreen() {
             console.log("Resend OTP failed:", error);
             Toast.show({
                 type: "error",
-                text1: "Otp Resend Failed"
+                text1: "Otp Resend Failed",
+                text2: "Please try again later",
+
             })
             throw error;
         }
@@ -154,6 +157,7 @@ export default function OtpScreen() {
                 textContentType="oneTimeCode"
                 importantForAutofill="yes"
                 maxLength={OTP_LENGTH}
+                editable={!isVerifying}
                 autoFocus
                 style={{ position: "absolute", opacity: 0 }}
             />

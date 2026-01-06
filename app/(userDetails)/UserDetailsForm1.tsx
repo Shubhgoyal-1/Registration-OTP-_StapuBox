@@ -39,9 +39,6 @@ const UserDetails1 = () => {
     }
 
     return (
-
-
-
         <SafeAreaView className="flex-1 bg-[rgb(45,46,47)]">
             <View className="flex-1 px-6 pt-4">
                 <CustomHeader title='Enter Your Details' showBack={false} />
