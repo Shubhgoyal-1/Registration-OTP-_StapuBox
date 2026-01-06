@@ -15,8 +15,8 @@ const UserDetails1 = () => {
     const [address2, setAddress2] = useState("");
 
     const router = useRouter()
-    // const isFormValid = name && address1 && pinCode;
-    const isFormValid = true;
+    const isFormValid = name && address1 && pinCode;
+    // const isFormValid = true;
     return (
         <SafeAreaView className="flex-1 bg-[rgb(45,46,47)]">
             <View className="flex-1 px-6 pt-10">
