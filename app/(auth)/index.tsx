@@ -12,6 +12,9 @@ const API_URL = "https://stapubox.com/trial/sendOtp";
 const API_TOKEN = process.env.EXPO_PUBLIC_API_TOKEN;
 
 export default function Index() {
+  console.log("TOKEN:",API_TOKEN);
+  console.log("URL:", API_URL);
+
   const router = useRouter()
   const mobile = useUserStore((state) => state.mobile);
   const setField = useUserStore((state) => state.setField);
