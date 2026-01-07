@@ -93,7 +93,7 @@ Make sure the Phone and laptop are on the same Wi-Fi network
 ## 2nd Approach
 1. Download the APK file
    
-   [`Install`]("https://expo.dev/accounts/ishubhgoyal/projects/LoginWithOtp/builds/4a57e5cf-ced8-4b00-98ef-ecadba0c10c8")
+   [`Install`](https://expo.dev/accounts/ishubhgoyal/projects/LoginWithOtp/builds/4a57e5cf-ced8-4b00-98ef-ecadba0c10c8)
 
 2. Enable Unknown Sources (Android)
 
